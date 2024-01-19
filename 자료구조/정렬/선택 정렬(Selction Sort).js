@@ -25,7 +25,7 @@ selectionSort(arr);
 let endTime = new Date().getTime();
 
 // 시간차 출력
-console.log('선택 정렬 소요 시간:', endTime-startTime, "ms.");
+console.log('선택 정렬 소요 시간:', endTime-startTime, "ms."); // 290 ms.
 
 /* 2) 이미 정렬된 배열에 대한 선택 정렬의 수행 시간 측정 */
 // 모든 값이 7인 정수 30000개를 담은 배열 생성
@@ -38,4 +38,4 @@ selectionSort(arr);
 endTime = new Date().getTime();
 
 // 시간차 출력 
-console.log('정렬된 배열에 대한 선택 정렬 소요 시간:', endTime - startTime, "ms.");
+console.log('정렬된 배열에 대한 선택 정렬 소요 시간:', endTime - startTime, "ms."); // 284 ms.
