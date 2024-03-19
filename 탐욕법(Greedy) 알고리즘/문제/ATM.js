@@ -1,18 +1,23 @@
-let fs = require('fs');
-let input = fs.readFileSync('input.txt').toString().split('\n');
+// ATM https://www.acmicpc.net/problem/11399
+let fs = require("fs");
+let input = fs.readFileSync("input.txt").toString().split("\n");
 
-// case 1) 권장
-let n = Number(input[0]); // 사람의 수
-let arr = input[1].split(' ').map(Number); // 모든 처리 시간 입력받기
-// 오름차순 정렬
-arr.sort((a, b) => a - b);
-
+// 권장 답안 
+// ATM 문제 풀기
+let n = Number(input[0]);
+// 오름차순으로 정렬을 하고 누적 값을 통해 계산한다.  1 3 6 9 13
+let arr = input[1].split(" ").map(Number);
+// 배열 오름차순 정렬
+arr.sort((a, b) => {
+  return a - b;
+});
+// 정답
+let result = 0;
 let answer = 0;
-let summary = 0;
 
-for (let i = 0; i < n; i++) {
-summary += arr[i]; // i번째 사람이 기다린 총 시간
-answer += summary; // 지금까지 소요된 총 시간
+for (let i = 0; i < arr.length; i++) {
+  result += Number(arr[i]);
+  answer += result;
 }
 
 console.log(answer);

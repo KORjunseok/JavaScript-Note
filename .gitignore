@@ -130,5 +130,10 @@ dist
 .pnp.*
 
 # 기타
+./input.txt
+./test
+.txt
 input.txt
+package-lock.json
 test.js
+input.txt
